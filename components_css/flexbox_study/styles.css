@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 14px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+input, button, textarea {
+    font-family: inherit;
+}
+
+ul li {
+    list-style: none;
+}
+
+
+img {
+    vertical-align: top;
+}
+
+nav, header, footer {
+    display: block;
+}
+
+/*+ */
+
+.wrapper {
+    margin: 0 auto;
+    /* max-width: 1180px; */
+    min-height: 100%;
+    /* overflow: hidden; */
+
+    display: flex;
+    flex-direction: column;
+
+    --color: #445162;
+}
+
+
+
+/*+ Content */
+
+.content {
+    /* прижимаем футер к низу, позволяя контенту увеличиваться */
+    flex: 1 1 auto;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1180px;
+    /* padding: auto 50px; */
+}
+
+.hi {
+    /* display: flex; */
+    /* align-items: center; */
+    padding: 50px 0;
+
+    background-color: rgb(122, 122, 167);
+}
+
+.hi__body {
+    color: #fff;
+    padding-right: 30px;
+
+}
+
+.hi__row {
+    display: flex;
+    justify-content: space-between;
+    /* padding: 0 50px; */
+}
+
+
+.hi__title {
+    font-size: 60px;
+    padding-bottom: 38px;
+}
+
+.hi__list li {
+    font-size: 20px;
+    background: url("/flexbox_study/img/check_icon.png") 0 1px no-repeat;
+    line-height: 22px;
+    padding: 0 0 0 36px;
+    margin: 0 0 15px 0;
+}
+
+.hi__image img {
+    width: 471px;
+    height: 215px;
+}
+
+
+/*+ Footer */
+
+.footer {
+    /* выравниваем надпись по центру вертикально и горизонтально */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 65px;
+    background-color: rgb(234, 238, 247);
+}
+
+
+.footer__text {
+    color: var(--color);
+    font-size: 12px;
+    letter-spacing: 0.3px;
+}
