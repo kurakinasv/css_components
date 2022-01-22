@@ -46,6 +46,8 @@ nav, header, footer {
     flex-direction: column;
 
     --color: #445162;
+    --title-col: rgb(122, 122, 167);
+    --text-col: #333333;
 }
 
 
@@ -100,6 +102,89 @@ nav, header, footer {
 .hi__image img {
     width: 471px;
     height: 215px;
+}
+
+
+
+/*+ What */
+
+.what {
+    padding: 50px 0;
+
+}
+
+.what__row {
+    display: flex;
+}
+
+.what__body {
+    padding-left: 38px;
+}
+
+.title {
+    font-size: 30px;
+    color: var(--title-col);
+}
+
+.what__text {
+    padding-top: 35px;
+    font-size: 16px;
+    color: var(--text-col);
+    line-height: 24px;
+}
+
+.what__para:first-child {
+    padding-bottom: 28px;
+}
+
+
+
+/*+ Columns */
+
+.columns {
+    background-color: #ececec;
+}
+
+.columns__row {
+    padding-top: 48px;
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.columns__block {
+    padding-top: 31px;
+
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.columns__item {
+    width: 50%;
+    padding-bottom: 30px;
+    padding-right: 16px;
+
+    display: flex;
+    /* margin-right: -8px; */
+}
+
+.columns__body {
+    padding-left: 15px;
+}
+
+.columns__subtitle {
+    padding-bottom: 16px;
+
+    font-size: 24px;
+    color: var(--color);
+}
+
+.columns__text {
+    font-size: 16px;
+    color: var(--text-col);
+    line-height: 22px;
 }
 
 
