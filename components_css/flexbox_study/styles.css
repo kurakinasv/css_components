@@ -110,31 +110,44 @@ nav, header, footer {
 
 .what {
     padding: 50px 0;
-
 }
 
 .what__row {
     display: flex;
 }
 
+.what__image {
+    /* запрещаем картинке увеличиваться */
+    flex: 0 0 430px;
+}
+
+.what__image img {
+    /* чтобы картинка могла быть меньше 430пх */
+    max-width: 100%;
+}
+
 .what__body {
+    /* а этот блок сможет изменяться в размерах */
+    flex: 1 1 auto;
+
     padding-left: 38px;
 }
 
 .title {
     font-size: 30px;
     color: var(--title-bg-col);
+    line-height: 36px;
 }
 
-.what__text {
-    padding-top: 35px;
+.what__title {
+    margin-bottom: 33px;
+}
+
+.what__text p {
+    margin-bottom: 25px;
     font-size: 16px;
     color: var(--text-col);
     line-height: 24px;
-}
-
-.what__para:first-child {
-    padding-bottom: 28px;
 }
 
 
