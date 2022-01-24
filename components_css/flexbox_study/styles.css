@@ -155,43 +155,56 @@ nav, header, footer {
 /*+ Columns */
 
 .columns {
+    padding: 50px 0 20px 0;
     background-color: #ececec;
 }
 
-.columns__row {
-    padding-top: 48px;
-    display: flex;
-    flex-direction: column;
-
-    justify-content: center;
-    align-items: center;
+.columns__title {
+    margin-bottom: 30px;
+    text-align: center;
 }
 
-.columns__block {
-    padding-top: 31px;
+.columns__row {
+    margin: 0 -8px;
 
     display: flex;
     flex-wrap: wrap;
 }
 
-.columns__item {
-    width: 50%;
-    padding-bottom: 30px;
-    padding-right: 16px;
+.columns__block {
+    margin-bottom: 30px;
+    padding: 0 8px;
 
+    /* запрещаем колонке увеличиваться, позволяем уменьшаться + размер в половину контейнера */
+    flex: 0 1 50%;
+}
+
+.columns__item {
+    padding-bottom: 30px;
     display: flex;
-    /* margin-right: -8px; */
+}
+
+.columns__item__row {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.columns__image {
+    /* фиксированный размер */
+    flex: 0 0 200px;
 }
 
 .columns__body {
     padding-left: 15px;
+    flex: 1 1 auto;
 }
 
 .columns__subtitle {
-    padding-bottom: 16px;
+    margin-bottom: 12px;
 
     font-size: 24px;
     color: var(--color);
+    line-height: 30px;
 }
 
 .columns__text {
