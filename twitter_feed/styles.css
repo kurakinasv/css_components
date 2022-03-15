@@ -414,6 +414,8 @@ body {
 .search__field {
     display: flex;
     align-items: center;
+
+    cursor: text;
 }
 
 .search__button {
@@ -426,6 +428,8 @@ body {
 
     font-size: 16px;
     color: var(--input-col);
+
+    cursor: auto;
 }
 
 .search__input {
@@ -446,6 +450,11 @@ body {
     outline: none;
 }
 
+.search__block:focus-within {
+    background-color: transparent;
+    outline: 1px solid var(--light-blue);
+}
+
 input[type="text"]::-webkit-input-placeholder {
     color: var(--input-col);
 }
@@ -459,7 +468,7 @@ input[type="text"]::-moz-placeholder {
 /*+ Trends */
 
 .trends {
-    margin-top: 30px;
+    margin: 16px 0;
 }
 
 .trends__block {
@@ -475,6 +484,52 @@ input[type="text"]::-moz-placeholder {
 
 .trends__title {
     font-weight: 700;
+    /* line-height: 1; */
+    line-height: 24px;
+    font-size: 20px;
+}
+
+.trends__settings {
+    width: 36px;
+    height: 36px;
+    display: block;
+    position: relative;
+    margin: -4px 0;
+
+
+    /* line-height: 40px; */
+
+    border-radius: 50%;
+    background-color: transparent;
+    z-index: 1;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.trends__settings::after {
+    content: "";
+    display: inline-block;
+    /* width: 40px; */
+    /* height: 40px; */
+
+    position: absolute;
+    /* margin: -12px 0; */
+    /* top: -2px; */
+    /* left: -11px; */
+    z-index: -1;
+
+    background-color: var(--search-col);
+    /* border-radius: 50%; */
+}
+
+.trends__settings:hover {
+    background-color: var(--search-col);
+    transition: 0.2s;
+}
+
+.trends__settings i {
+    font-size: 16px;
+    color: #fff;
 }
 
 .trends__item {
@@ -482,6 +537,18 @@ input[type="text"]::-moz-placeholder {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.trends__more {
+    border-radius: 0 0 10px 10px;
+    cursor: pointer;
+}
+
+.trends__item:hover, .trends__more:hover {
+    background-color: var(--search-col);
+    transition: 0.3s;
 }
 
 .trends__trending {
@@ -504,13 +571,124 @@ input[type="text"]::-moz-placeholder {
 }
 
 .trends__dots {
+    width: 30px;
+    height: 30px;
+    margin: -8px;
+
+    position: relative;
+
     font-size: 20px;
     color: var(--grey);
-    line-height: 20px;
+    text-align: center;
+    line-height: 30px;
+
+    border-radius: 50%;
+
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.trends__dots:hover {
+    background-color: rgba(29, 155, 240, 0.1);
+    color: var(--light-blue);
+    transition: 0.5s;
+}
+
+.trends__dots::after {
+    content: "";
+    opacity: 0;
+}
+
+.trends__dots:hover:after {
+    content: attr(data-title);
+
+    display: block;
+    position: absolute;
+    padding: 6px 4px;
+
+    top: 30px;
+    left: -3px;
+
+    font-size: 12px;
+    color: #fff;
+    text-align: center;
+    line-height: 1;
+
+    background-color: var(--grey);
+    border-radius: 4px;
+
+    opacity: 1;
+    transition: opacity 0s linear 1s;
 }
 
 .trends__more {
     padding: 16px;
     font-size: 15px;
     color: var(--light-blue);
+}
+
+
+
+/*+ Who to follow */
+
+.wtf__profile {
+    width: 100%;
+    padding: 12px 16px;
+    border-radius: 100px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    transition: all 0.1s ease-in;
+}
+
+.wtf__info {
+    display: flex;
+    align-items: center;
+}
+
+.wtf__avatar {
+    /* display: inline-block; */
+    /* max-height: 48px; */
+    /* border-radius: 50%; */
+}
+
+.wtf__avatar img {
+    display: block;
+}
+
+.wtf__profile__link {
+    text-decoration: none;
+    color: #fff;
+}
+
+.wtf__profile__link:hover .username {
+    /* background-color: #2f3a44; */
+    /* transition: all 0.1s ease-in; */
+
+    text-decoration: underline solid;
+
+}
+
+.wtf__profile__names {
+    padding-left: 12px;
+}
+
+.wtf__follow {
+    min-width: 77px;
+    min-height: 32px;
+
+    display: flex;
+    justify-content: center;
+
+    background-color: #fff;
+    border-radius: 100px;
+}
+
+.wtf__button {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    background-color: transparent;
 }
